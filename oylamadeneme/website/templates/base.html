@@ -19,7 +19,7 @@
                 <a class="nav-item nav-link" id="viewPolls" href="{{ url_for('views.list_polls') }}">Oylamaları Görüntüle</a>
                 <a class="nav-item nav-link" id="createPoll" href="{{ url_for('views.create_poll') }}">Anket Oluştur</a>
                 <a class="nav-item nav-link" id="createGroup" href="{{ url_for('views.create_group') }}">Grup Oluştur</a>
-                <a class="nav-item nav-link" id="logout" href="{{ url_for('auth.logout') }}">Çıkış</a>
+                <a class="nav-item nav-link" id="logout" href="{{ url_for('auth.logout') }}" onclick="return confirm('Çıkış yapmak istediğinizden emin misiniz?')" style="color: rgb(211, 0, 0); border: 1px solid red; border-radius: 5px; padding: 7px;">Çıkış</a>
                 {% else %}
                 <a class="nav-item nav-link" id="login" href="{{ url_for('auth.login') }}">Giriş</a>
                 <a class="nav-item nav-link" id="signUp" href="{{ url_for('auth.sign_up') }}">Kayıt Ol</a>

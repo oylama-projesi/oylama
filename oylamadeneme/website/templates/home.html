@@ -1,5 +1,46 @@
 {% extends "base.html" %} 
 {% block title %}Ana Sayfa{% endblock %} 
 {% block content %}
-    <h1 align="center">Sitemize Hoşgeldiniz</h1>
+  <div class="container">
+    <div class="content-center">
+      <h1 class="animated-text">Sitemize Hoşgeldiniz</h1>
+    </div>
+  </div>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+    }
+
+    .animated-text {
+      font-size: 128px;
+      font-weight: bold;
+      color: #4a55ec;
+      text-align: center;
+      animation: fade-in 3s ease-in-out;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(1000px);
+        color: #ffffff;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+        color: #6873ec;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        color: #4a55ec;
+      }
+    }
+  </style>
 {% endblock %}
